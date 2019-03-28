@@ -1,8 +1,8 @@
 import { API } from '../api'
-import { _path } from '../apiHost'
+import { path } from '../apiHost'
 // 接口地址
 export const USER_API_URL = {
-	LOGIN: _path('/api/login/v1.0')
+	LOGIN: path('/api/login/v1.0')
 }
 // api请求方法定义
 export default {

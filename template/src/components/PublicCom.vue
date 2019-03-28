@@ -1,6 +1,6 @@
 <template>
 	<div class="component-container">
-		{{msg}}
+		\{{msg}}
 	</div>
 </template>
 <script>

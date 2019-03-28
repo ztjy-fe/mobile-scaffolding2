@@ -18,8 +18,8 @@ default:
 	BASE_API = 'http://api.szy.cn'
 	break
 }
-const _path = path => BASE_API + path
+const path = path => BASE_API + path
 
 export {
-	_path
+	path
 }
