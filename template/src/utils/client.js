@@ -18,11 +18,9 @@ const jsToClient = (methodName, params) => {
 	})
 }
 // 客户端调js
-const clientToJs = (methodName) => {
-	return new Promise((resolve, reject) => {
-		dsbridge.register(namespace + '.' + methodName, res => {
-			resolve(res)
-		})
+const clientToJs = (methodName, callback) => {
+	dsbridge.register(namespace + '.' + methodName, res => {
+		callback && callback(res)
 	})
 }
 export {
