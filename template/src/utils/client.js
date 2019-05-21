@@ -12,9 +12,15 @@ const namespace = dsbridge.call('getNameSpace')
 const jsToClient = (methodName, params) => {
 	const para = typeof params === 'string' ? params : JSON.stringify(params)
 	return new Promise((resolve, reject) => {
-		dsbridge.call(namespace + '.' + methodName, para, res => {
-			resolve(res)
-		})
+		let nativeMethod = namespace + '.' + methodName
+		let hasNativeMethod = dsbridge.hasNativeMethod(nativeMethod)
+		if (hasNativeMethod) {
+			dsbridge.call(nativeMethod, para, res => {
+				resolve(res)
+			})
+		} else {
+			reject(new Error())
+		}
 	})
 }
 // 客户端调js
