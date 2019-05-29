@@ -8,6 +8,6 @@ export default {
 			data: pvPara
 		})
 		// 友盟报数
-		umengPara && jsToClient('umengReport', umengPara)
+		umengPara && jsToClient('onUmengEvent', umengPara)
 	}
 }
