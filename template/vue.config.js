@@ -7,14 +7,14 @@ module.exports = {
 	productionSourceMap: false,
 	configureWebpack: {
 		output: {
-			filename: 'static/js/[name].[hash:8].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js',
-			chunkFilename: 'static/js/[name].[chunkhash:8].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js'
+			filename: 'static/js/[name].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js',
+			chunkFilename: 'static/js/[name].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js'
 		}
 	},
 	css: {
 		extract: {
-			filename: 'static/css/[name].[hash:8].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.css',
-			chunkFilename: 'static/css/[id].[chunkhash:8].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.css'
+			filename: 'static/css/[name].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.css',
+			chunkFilename: 'static/css/[id].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.css'
 		}
 	},
 	devServer: {
