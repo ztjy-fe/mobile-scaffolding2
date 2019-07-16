@@ -7,24 +7,14 @@ module.exports = {
 	productionSourceMap: false,
 	configureWebpack: {
 		output: {
-<<<<<<< HEAD
 			filename: 'static/js/[name].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js',
 			chunkFilename: 'static/js/[name].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js'
-=======
-			filename: 'static/js/[name].[hash:8]' + utils.getFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js',
-			chunkFilename: 'static/js/[name].[chunkhash:8]' + utils.getFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js'
->>>>>>> f24ccb243e61dd6a234d3b84a30015162c6ee8ba
 		}
 	},
 	css: {
 		extract: {
-<<<<<<< HEAD
 			filename: 'static/css/[name].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.css',
 			chunkFilename: 'static/css/[id].' + formatFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.css'
-=======
-			filename: 'static/css/[name].[hash:8]' + utils.getFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.css',
-			chunkFilename: 'static/css/[id].[chunkhash:8]' + utils.getFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.css'
->>>>>>> f24ccb243e61dd6a234d3b84a30015162c6ee8ba
 		}
 	},
 	devServer: {
